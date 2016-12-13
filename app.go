@@ -26,7 +26,7 @@ func main() {
 		const query = "cat"
 		const maxResults = 10 //MAX 50
 
-		sr, err := Search(query, maxResults)
+		sr, err := search(query, maxResults)
 		if err != nil {
 				fmt.Println(err);
 		} else {
@@ -42,7 +42,7 @@ func convert(videos[] Video) {
 		}
 }
 
-func Search(term string, num int64) (SearchResponse, error) {
+func search(term string, num int64) (SearchResponse, error) {
 
 		videos := []Video{}
 		searchResponse := SearchResponse{}
